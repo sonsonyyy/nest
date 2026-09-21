@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { EpisodesService } from './episodes.service';
 import { CreateEpisodeDto } from './dto/create-episode.dto';
-import { ConfigService } from 'src/config/config.service';
+import { ConfigService } from '../config/config.service';
 
 @Controller('episodes')
 export class EpisodesController {
@@ -18,9 +18,9 @@ export class EpisodesController {
     }
 
     @Get('featured')
-    findFeatured() {
+    findFeaturedEpisodes() {
         this.configService.logMessage();
-        return this.episodeService.findFeatured();
+        return this.episodeService.findFeaturedEpisodes();
     }
 
     @Get(':id')

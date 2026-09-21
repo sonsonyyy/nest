@@ -16,7 +16,7 @@ export class EpisodesService {
             : this.episodes.sort(sortDesc);
     }
 
-    async findFeatured() {
+    async findFeaturedEpisodes() {
         return this.episodes.filter((episode) => episode.featured);
     }
 
