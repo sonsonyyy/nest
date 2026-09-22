@@ -10,7 +10,7 @@ describe('EpisodesController', () => {
   const mockEpisodesService = {
     findAll: async () => [{ id: 'id' }],
     findFeaturedEpisodes: async () => [{ id: 'id' }],
-    findOne: async () => [{ id:'id' }],
+    findOne: async () => [{ id: 'id' }],
     created: async () => [{ id: 'id' }],
   };
 
